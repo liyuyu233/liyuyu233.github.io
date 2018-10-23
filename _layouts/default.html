@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+********************************
+|               |              |
+|sidebar        |       content|
+|               |              |
+|               |              |
+|***\           |              |
+|    \**********|              |
+|character      |              |
+|               |              | 
+|               |              |
+********************************
+*****************
+|    sidebar    |
+*****************
+|  \ content    |
+|   \           |
+|    \          |
+|     \         |
+| image         |
+*****************
+-->
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ "/assets/css/markdown.css" | relative_url }}">
+	<link id="css_page_framework" rel="stylesheet" type="text/css" href="{{ "/assets/css/page-framework.css" | relative_url }}">
+</head>
+
+<body>
+	<div id="sidebar">
+		<h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+		<p>{{- site.description -}}</p>
+	</div>
+	{% if site.character %}
+	<div id="sidebar_character">
+		<img src="{{ page.character | default: site.character | relative_url }}" alt="Sidebar Character" />
+	</div>
+	{% endif %}
+	<div id="content_container">
+		<div id="content">
+			{{- content -}}
+		</div>
+	</div>
+	<script src="{{ "/assets/scripts/page-framework.js" | relative_url }}"></script>
+</body>
+
+</html>

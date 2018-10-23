@@ -1,0 +1,11 @@
+strict_front_matter: true
+encoding: utf-8
+
+title: A test Jekyll Site
+description: School of Finance, RUC
+author: liyuyu
+character: /assets/img/xtz.png
+lang: en-US
+
+plugins:
+  - jekyll-feed
