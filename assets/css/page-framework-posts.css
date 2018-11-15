@@ -24,7 +24,7 @@
 }
 
 #content_container {
-	padding: 50px 30px;
+	padding: 30px 30px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
@@ -49,7 +49,7 @@
 	}
 
 	#content_container {
-		padding: 30px;
+		padding: 10px;
 		margin-left: auto;
 		margin-right: auto;
 		min-height: 0px;
