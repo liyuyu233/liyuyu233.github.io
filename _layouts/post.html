@@ -10,23 +10,23 @@
 
 <body>
 	
-	<div id="content_container">
-		<div id="content">
-				<script type="text/x-mathjax-config">
-					MathJax.Hub.Config({
-						showMathMenu: false,
-						extensions: ["tex2jax.js"],
-						jax: ["input/TeX", "output/HTML-CSS"],
-						tex2jax: {
-							inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-							displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-							processEscapes: true
-						},
-						"HTML-CSS": { fonts: ["TeX"] }
-					});
-					</script>
-					
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>					
+<div id="content_container">
+<div id="content">
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		showMathMenu: false,
+		extensions: ["tex2jax.js"],
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true
+		},
+		"HTML-CSS": { fonts: ["TeX"] }
+	});
+	</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>					
 
                     <small>{{ page.date | date: "%-d %B %Y" }}<br /></small>
                     <h1>{{ page.title }}</h1>
@@ -36,11 +36,7 @@
                     {{ content }}
                             </div>
 	</div>
-	<script src="{{ "/assets/scripts/page-framework.js" | relative_url }}"></script>
+	<script src="{{ "/assets/scripts/page-framework-posts.js" | relative_url }}"></script>
 </body>
 
 </html>
-
-{%- if page.tags -%}
-<small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em><br /></small>
-{%- endif -%}
