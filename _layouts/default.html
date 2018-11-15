@@ -31,6 +31,7 @@
 </head>
 
 <body>
+	
 	<div id="sidebar">
 		<h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
 		<p>{{- site.description -}}</p>
@@ -42,6 +43,21 @@
 	{% endif %}
 	<div id="content_container">
 		<div id="content">
+				<script type="text/x-mathjax-config">
+					MathJax.Hub.Config({
+						showMathMenu: false,
+						extensions: ["tex2jax.js"],
+						jax: ["input/TeX", "output/HTML-CSS"],
+						tex2jax: {
+							inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+							displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+							processEscapes: true
+						},
+						"HTML-CSS": { fonts: ["TeX"] }
+					});
+					</script>
+					
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>					
 			{{- content -}}
 		</div>
 	</div>

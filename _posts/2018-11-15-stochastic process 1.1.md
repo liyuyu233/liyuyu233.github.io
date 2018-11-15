@@ -1,19 +1,3 @@
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    showMathMenu: false,
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    "HTML-CSS": { fonts: ["TeX"] }
-});
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-
 # 随机过程1.1
 这一章主要介绍了样本空间、 $\sigma$域、概率、事件列的基本概念、相关定理或命题及其证明。
 
