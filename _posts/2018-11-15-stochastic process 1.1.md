@@ -26,6 +26,7 @@ $$
 1. （非负性）$P(A) \ge 0, \forall A \in \mathcal{F}$ 
 2. （规一性）$P(\varOmega)=1$ 
 3. （可列可加性）若 
+   
    $$
    A_i \in \mathcal{F}, i=1,2,\dots\\
    A_iA_j=\phi，\forall i \neq j
