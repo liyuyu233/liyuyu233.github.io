@@ -23,11 +23,11 @@
 }
 .highlight .err {
 	color: #a61717;
-	background-color: #e3d2d2;
+	background-color: #000;
 }
 .highlight .gd {
-	color: #000000;
-	background-color: #ffdddd;
+	color: #ffdddd;
+	background-color: #000;
 }
 .highlight .ge {
 	color: #000000;
@@ -40,8 +40,8 @@
 	color: #999999;
 }
 .highlight .gi {
-	color: #000000;
-	background-color: #ddffdd;
+	color: #ddffdd;
+	background-color: #000;
 }
 .highlight .go {
 	color: #888888;
@@ -205,5 +205,5 @@
 	color: #bbbbbb;
 }
 .highlight {
-	background-color: #f8f8f8;
+	background-color: #555555;
 }
