@@ -28,9 +28,11 @@ $$
 3. （可列可加性）若 
    $$
    A_i \in \mathcal{F}, i=1,2,\dots\\
-   A_iA_j=\phi，\forall i =\not j
+   A_iA_j=\phi，\forall i \neq j
    $$
+
    则
+
    $$
    P(\bigcup_{i=1}^{\infty} A_i)=\sum_{i=1}^{\infty} P(A_i)
    $$
@@ -39,17 +41,20 @@ $$
 
 ## 事件列的极限
 序列$\lbrace A_n,n\ge 1\rbrace$ 若满足$A_n \subset A_{n+1}, n \ge 1$，则该序列为单调增序列，其极限
+
 $$
 \lim\limits_{n \rightarrow \infty} A_n=\bigcup_{i=1}^{\infty}A_i
 $$
 
 序列$\lbrace A_n,n\ge 1\rbrace$ 若满足$A_n \supset A_{n+1}, n \ge 1$，则该序列为单调减序列，其极限
+
 $$
 \lim\limits_{n \rightarrow \infty} A_n=\bigcap_{i=1}^{\infty}A_i
 $$
 
 **连续性定理**：
 若$\lbrace A_n,n\ge 1\rbrace$是单调增（减）序列，则
+
 $$
 P(\lim\limits_{n \rightarrow +\infty}A_n)=\lim\limits_{n \rightarrow  +\infty}P(A_n)
 $$
