@@ -25,9 +25,8 @@
 
 #content_container {
 	padding: 50px 30px;
-
-	left: 270px;
-
+	margin-left: auto;
+	margin-right: auto;
 	text-align: left;
 }
 
