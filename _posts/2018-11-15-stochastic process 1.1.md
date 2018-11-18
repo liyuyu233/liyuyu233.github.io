@@ -8,9 +8,15 @@
 $\sigma$ 域是一种对交、并、差运算封闭的集类。具体而言，如果由 $\varOmega$ 的一些子集构成的非空集类 $\mathcal{F}$ 满足
 
 $$
-A \in \mathcal{F}, A^C = \varOmega - A \to A^C \in \mathcal{F}\\
-A_i \in \mathcal{F}, i \in N \to \bigcup_{i=1}^{\infty} A_i \in \mathcal{F}
+ \left.\begin{array}{l}
+ & A \in \mathcal{F} \\ 
+ & A^C = \varOmega - A 
+ \end{array} \right\} 
+ \to A^C\in \mathcal{F} 
+$$
 
+$$
+A_i \in \mathcal{F}, i \in N \to \bigcup_{i=1}^{\infty} A_i \in \mathcal{F}
 $$
 
 则称 $\mathcal{F}$ 为 $\sigma$ 域。
