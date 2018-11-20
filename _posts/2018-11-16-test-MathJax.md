@@ -29,7 +29,14 @@ Modified from [MathJax与LaTex公式简介 (转载)](http://www.cnblogs.com/linx
 ## 括号
 
 * 小括号与方括号：使用原始的`()`，`[]`即可，如`(2+3)[4+4]`: $(2+3)[4+4]$
-* 大括号：由于大括号{}被用来分组，因此需要使用`\{`和`\}`表示大括号，也可以使用`\lbrace`和`\rbrace`来表示。如`\{a*b\}`: $\{a*b\}$，`\lbrace a*b \rbrace` : $\lbrace a*b \rbrace$
+* 大括号：由于大括号{}被用来分组，因此需要使用`\{`和`\}`表示大括号，也可以使用`\lbrace`和`\rbrace`来表示。如
+ 
+  `\{a*b\}`: 
+  $$\{a*b\}$$
+  
+  `\lbrace a*b \rbrace` : 
+  $$\lbrace a*b \rbrace$$
+  
 * 尖括号：使用`\langle`和`\rangle`表示左尖括号和右尖括号。如`\langle x \rangle` : $\langle x \rangle$
 * 上取整：使用`\lceil`和`\rceil`表示。如`\lceil x \rceil`：$\lceil x \rceil$
 * 下取整：使用`\lfloor`和`\rfloor`表示。如`\lfloor x \rfloor`：$\lfloor x \rfloor$
@@ -219,15 +226,31 @@ $$
 如果要对矩阵加括号，可以像上文中提到的那样，使用`\left`与`\right`配合表示括号符号。也可以使用特殊的matrix，即替换`\begin{matrix}...\end{matrix}`中的`matrix`为`pmatrix` , `bmatrix` , `Bmatrix` , `vmatrix` , `Vmatrix`.
 如 
 
-`pmatrix`: $\begin{pmatrix} 1 & 2 \\ 3 & 4 \\ \end{pmatrix}$ 
+`pmatrix`: 
+$$
+\begin{pmatrix} 
+1 & 2 \\ 
+3 & 4 \\ 
+\end{pmatrix}
+$$ 
 
-`bmatrix`: $\begin{bmatrix} 1 & 2 \\ 3 & 4 \\ \end{bmatrix}$ 
+`bmatrix`: 
+$$
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \\ \end{bmatrix}
+$$ 
 
-`Bmatrix`: $\begin{Bmatrix} 1 & 2 \\ 3 & 4 \\ \end{Bmatrix}$ 
+`Bmatrix`: 
+$$\begin{Bmatrix} 1 & 2 \\ 3 & 4 \\ \end{Bmatrix}$$ 
 
-`vmatrix`: $\begin{vmatrix} 1 & 2 \\  3 & 4 \\ \end{vmatrix}$ 
+`vmatrix`: 
+$$
+\begin{vmatrix} 1 & 2 \\  3 & 4 \\ \end{vmatrix}
+$$ 
 
-`Vmatrix`: $\begin{Vmatrix} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix}$
+`Vmatrix`: 
+$$
+\begin{Vmatrix} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix}
+$$
 
 ### 省略元素
 可以使用
@@ -526,7 +549,7 @@ $$
 [HTML色彩快速参考手册](http://www.w3schools.com/html/html_colors.asp)
 
 ## 公式标记与引用
-使用`\tag{yourtat}`来标记公式，如果想在之后引用该公式，则还需要加上`\label{yourlabel}`在`\tag`之后，如：
+使用`\tag{yourtag}`来标记公式，如果想在之后引用该公式，则还需要加上`\label{yourlabel}`在`\tag`之后，如：
 
 ```
 $$ a:= x^2-y^3 \tag{*}\label{*} $$
