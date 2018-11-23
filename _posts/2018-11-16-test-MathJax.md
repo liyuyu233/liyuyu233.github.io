@@ -162,6 +162,7 @@ $$
 使用[Detexify](http://detexify.kirelabs.org/classify.html)，你可以在网页上画出符号，Detexify会给出相似的符号及其代码。这是一个方便的功能，但是不能保证它给出的符号可以在MathJax中使用，你可以参考[supported-latex-commands](http://docs.mathjax.org/en/latest/tex.html#supported-latex-commands)确定MathJax是否支持此符号。
 ### 希腊字母
 大写的希腊字母：将代码的首字母大写即可。
+
 代码 | 大写 | 小写
 --- | --- | ---
 `\alpha` | $\Alpha$ | $\alpha$
