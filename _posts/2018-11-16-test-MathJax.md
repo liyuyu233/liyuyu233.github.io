@@ -7,6 +7,7 @@ Modified from [MathJax与LaTex公式简介 (转载)](http://www.cnblogs.com/linx
 - [分式和根式](#%E5%88%86%E5%BC%8F%E5%92%8C%E6%A0%B9%E5%BC%8F)
 - [字体](#%E5%AD%97%E4%BD%93)
 - [特殊函数和符号](#%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0%E5%92%8C%E7%AC%A6%E5%8F%B7)
+   - [希腊字母](#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D)
    - [空间](#%E7%A9%BA%E9%97%B4)
    - [顶部符号](#%E9%A1%B6%E9%83%A8%E7%AC%A6%E5%8F%B7)
    - [转义](#%E8%BD%AC%E4%B9%89)
@@ -158,9 +159,37 @@ $$
 
   $$a_1 + a_2 + \cdots + a_n , a_1, a_2, \ldots , a_n$$
 
-* 一些希腊字母具有变体形式，如`\epsilon \varepsilon` : $\epsilon$ $\varepsilon$ , `\phi \varphi` : $\phi$ $\varphi$
-
 使用[Detexify](http://detexify.kirelabs.org/classify.html)，你可以在网页上画出符号，Detexify会给出相似的符号及其代码。这是一个方便的功能，但是不能保证它给出的符号可以在MathJax中使用，你可以参考[supported-latex-commands](http://docs.mathjax.org/en/latest/tex.html#supported-latex-commands)确定MathJax是否支持此符号。
+### 希腊字母
+大写的希腊字母：将代码的首字母大写即可。
+代码 | 大写 | 小写
+--- | --- | ---
+`\alpha` | $\Alpha$ | $\alpha$
+`\beta` | $\Beta$ | $\beta$
+`\gamma` | $\Gamma$ | $\gamma$
+`\delta` | $\Delta$ | $\delta$
+`\epsilon` | $\Epsilon$ | $\epsilon$
+`\zeta` | $\Zeta$ | $\zeta$
+`\nu` | $\Nu$ | $\nu$
+`\xi` | $\Xi$ | $\xi$
+`omicron` | $\Omicron$ | $\omicron$
+`\pi` | $\Pi$ | $\pi$
+`\rho` | $\Rho$ | $\rho$
+`\sigma` | $\Sigma$ | $\sigma$
+`\eta` | $\Eta$ | $\eta$
+`\theta` | $\Theta$ | $\theta$
+`\iota` | $\Iota$ | $\iota$
+`\kappa` | $\Kappa$ | $\kappa$
+`\lambda` | $\Lambda$ | $\lambda$
+`\mu` | $\Mu$ | $\mu$
+`\tau` | $\Tau$ | $\tau$
+`\upsilon` | $\Upsilon$ | $\upsilon$
+`\phi` | $\Phi$ | $\phi$
+`\chi` | $\Chi$ | $\chi$
+`\psi` | $\Psi$ | $\psi$
+`\omega` | $\Omega$ | $\omega$
+
+* 一些希腊字母具有变体形式，如`\epsilon \varepsilon` : $\epsilon$ $\varepsilon$ , `\phi \varphi` : $\phi$ $\varphi$
 
 ### 空间
 
