@@ -130,11 +130,13 @@ $$|A|=|L||U|$$
 $Q$是正交矩阵，$R$是上三角矩阵。
 
 $$
-A=QR\\
-Ax=b\\
-QRx=b\\
-Q^TQRx=Q^Tb\\
-Rx=Q^Tb
+\begin{align}
+A &=QR\\
+Ax &=b\\
+QRx &=b\\
+Q^TQRx &=Q^Tb\\
+Rx &=Q^Tb
+\end{align}
 $$
 
 ## 格拉姆施密特正交化过程
