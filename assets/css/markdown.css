@@ -137,6 +137,7 @@ hr {
 	body {
 		padding:0.4in;
 		font-size:12pt;
-		color:#000;
+		color:black;
+		background-color: white;
 	}
 }
