@@ -84,12 +84,15 @@ end
 高斯消元第一步相当于
 
 $$
-\left[\begin{align}
-1 & 0 & 0 \\
-frac{a_{21}}{a_{11}} & 1 & 0 \\
-frac{a_{31}}{a_{11}} & 0 & 1
-\end{align}\right]A
+\begin{vmatrix}
+1 & 0 & 0 & \cdots\\
+\frac{a_{21}}{a_{11}} & 1 & 0 & \cdots \\
+\frac{a_{31}}{a_{11}} & 0 & 1 & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{vmatrix}A
 $$
+
+接下来的几步就相当于
 
 $$L_{n-1}L_{n-2}...L_1A=U \Rightarrow A= L_1^{-1}L_2^{-1}...L_{n-1}^{-1}U=LU$$
 
@@ -138,10 +141,12 @@ $$
 首先，对于$(a_1,a_2,...,a_n)$找标准正交基
 
 $$
-b_1=a_1 \Rightarrow e_1=\frac{b_1}{|b_1|}\\
-b_2=a_2-<a_2,e_1>e_1 \Rightarrow e_2=\frac{b_2}{|b_2|}\\
-b_3=a_3-<a_3,e_1>e_1-<a_3,e_2>e_2 \Rightarrow e_3=\frac{b_3}{|b_3|}\\
-...
+\begin{align}
+b_1 &=a_1 \Rightarrow e_1=\frac{b_1}{|b_1|}\\
+b_2 &=a_2-<a_2,e_1>e_1 \Rightarrow e_2=\frac{b_2}{|b_2|}\\
+b_3 &=a_3-<a_3,e_1>e_1-<a_3,e_2>e_2 \Rightarrow e_3=\frac{b_3}{|b_3|}\\
+&...
+\end{align}
 $$
 
 易知$<b_1,b_2>=0$, ...
@@ -149,18 +154,21 @@ $$
 这些标准正交基排列起来可以得到一个正交矩阵。从而
 
 $$
-a_1=|b_1|e_1\\
-a_2=|b_2|e_2 + <a_2,e_1>e_1\\
-a_3=|b_3|e_3 + <a_3,e_1>e_1 + <a_3,e_2>e_2\\
-...
+\begin{align}
+a_1 &=|b_1|e_1\\
+a_2 &=|b_2|e_2 + <a_2,e_1>e_1\\
+a_3 &=|b_3|e_3 + <a_3,e_1>e_1 + <a_3,e_2>e_2\\
+&...
+\end{align}
 $$
 
 $$
 (a_1,a_2,...a_n)=(e_1,e_2,...,e_n)
-\left[\begin{align}
-|b_1| & <a_2,e_1> & <a_3,e_1> & ...\\
-0 & |b_2| & <a_3,e_2> & ...\\
-0 & 0 & |b_3| & ...\\
-0 & 0 & 0 & ...\\
-\end{align}\end]
+\begin{vmatrix}
+|b_1| & <a_2,e_1> & <a_3,e_1> & \cdots\\
+0 & |b_2| & <a_3,e_2> & \cdots\\
+0 & 0 & |b_3| & \cdots\\
+\vdots & \vdots & \vdots & \ddots\\
+\end{vmatrix}
 $$
+
