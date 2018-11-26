@@ -84,12 +84,12 @@ end
 高斯消元第一步相当于
 
 $$
-\begin{vmatrix}
+\begin{bmatrix}
 1 & 0 & 0 & \cdots\\
 \frac{a_{21}}{a_{11}} & 1 & 0 & \cdots \\
 \frac{a_{31}}{a_{11}} & 0 & 1 & \cdots \\
 \vdots & \vdots & \vdots & \ddots
-\end{vmatrix}A
+\end{bmatrix}A
 $$
 
 接下来的几步就相当于
@@ -168,11 +168,11 @@ $$
 
 $$
 (a_1,a_2,...a_n)=(e_1,e_2,...,e_n)
-\begin{vmatrix}
+\begin{bmatrix}
 |b_1| & <a_2,e_1> & <a_3,e_1> & \cdots\\
 0 & |b_2| & <a_3,e_2> & \cdots\\
 0 & 0 & |b_3| & \cdots\\
 \vdots & \vdots & \vdots & \ddots\\
-\end{vmatrix}
+\end{bmatrix}
 $$
 
