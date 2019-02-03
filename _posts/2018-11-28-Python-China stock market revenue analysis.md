@@ -3,6 +3,7 @@ title: 中国A股市场年化收益率统计(Python)
 layout: post
 ---
 
+
 - [A股年化收益率统计](#a%E8%82%A1%E5%B9%B4%E5%8C%96%E6%94%B6%E7%9B%8A%E7%8E%87%E7%BB%9F%E8%AE%A1)
   - [方法一：对wind终端导出的数据进行处理](#%E6%96%B9%E6%B3%95%E4%B8%80%E5%AF%B9wind%E7%BB%88%E7%AB%AF%E5%AF%BC%E5%87%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A4%84%E7%90%86)
     - [第一步：下载年化收益率数据](#%E7%AC%AC%E4%B8%80%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%B9%B4%E5%8C%96%E6%94%B6%E7%9B%8A%E7%8E%87%E6%95%B0%E6%8D%AE)

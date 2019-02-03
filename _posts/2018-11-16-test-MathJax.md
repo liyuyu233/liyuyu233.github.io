@@ -7,23 +7,23 @@ Modified from [MathJax与LaTex公式简介 (转载)](http://www.cnblogs.com/linx
 - [分式和根式](#%E5%88%86%E5%BC%8F%E5%92%8C%E6%A0%B9%E5%BC%8F)
 - [字体](#%E5%AD%97%E4%BD%93)
 - [特殊函数和符号](#%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0%E5%92%8C%E7%AC%A6%E5%8F%B7)
-   - [希腊字母](#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D)
-   - [空间](#%E7%A9%BA%E9%97%B4)
-   - [顶部符号](#%E9%A1%B6%E9%83%A8%E7%AC%A6%E5%8F%B7)
-   - [转义](#%E8%BD%AC%E4%B9%89)
+  - [希腊字母](#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D)
+  - [空间](#%E7%A9%BA%E9%97%B4)
+  - [顶部符号](#%E9%A1%B6%E9%83%A8%E7%AC%A6%E5%8F%B7)
+  - [转义](#%E8%BD%AC%E4%B9%89)
 - [表格](#%E8%A1%A8%E6%A0%BC)
 - [矩阵](#%E7%9F%A9%E9%98%B5)
-   - [加括号](#%E5%8A%A0%E6%8B%AC%E5%8F%B7)
-   - [省略元素](#%E7%9C%81%E7%95%A5%E5%85%83%E7%B4%A0)
-   - [增广矩阵](#%E5%A2%9E%E5%B9%BF%E7%9F%A9%E9%98%B5)
-   - [对齐的公式](#%E5%AF%B9%E9%BD%90%E7%9A%84%E5%85%AC%E5%BC%8F)
-   - [分类表达式](#%E5%88%86%E7%B1%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+  - [加括号](#%E5%8A%A0%E6%8B%AC%E5%8F%B7)
+  - [省略元素](#%E7%9C%81%E7%95%A5%E5%85%83%E7%B4%A0)
+  - [增广矩阵](#%E5%A2%9E%E5%B9%BF%E7%9F%A9%E9%98%B5)
+  - [对齐的公式](#%E5%AF%B9%E9%BD%90%E7%9A%84%E5%85%AC%E5%BC%8F)
+  - [分类表达式](#%E5%88%86%E7%B1%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F)
 - [空间问题](#%E7%A9%BA%E9%97%B4%E9%97%AE%E9%A2%98)
-   - [不要在指数或者积分中使用`\frac`](#%E4%B8%8D%E8%A6%81%E5%9C%A8%E6%8C%87%E6%95%B0%E6%88%96%E8%80%85%E7%A7%AF%E5%88%86%E4%B8%AD%E4%BD%BF%E7%94%A8frac)
-   - [使用`\mid`代替`|`作为分隔符](#%E4%BD%BF%E7%94%A8mid%E4%BB%A3%E6%9B%BF%E4%BD%9C%E4%B8%BA%E5%88%86%E9%9A%94%E7%AC%A6)
-   - [多重积分](#%E5%A4%9A%E9%87%8D%E7%A7%AF%E5%88%86)
-   - [连分数](#%E8%BF%9E%E5%88%86%E6%95%B0)
-   - [方程组](#%E6%96%B9%E7%A8%8B%E7%BB%84)
+  - [不要在指数或者积分中使用`\frac`](#%E4%B8%8D%E8%A6%81%E5%9C%A8%E6%8C%87%E6%95%B0%E6%88%96%E8%80%85%E7%A7%AF%E5%88%86%E4%B8%AD%E4%BD%BF%E7%94%A8frac)
+  - [使用`\mid`代替`|`作为分隔符](#%E4%BD%BF%E7%94%A8mid%E4%BB%A3%E6%9B%BF%E4%BD%9C%E4%B8%BA%E5%88%86%E9%9A%94%E7%AC%A6)
+  - [多重积分](#%E5%A4%9A%E9%87%8D%E7%A7%AF%E5%88%86)
+  - [连分数](#%E8%BF%9E%E5%88%86%E6%95%B0)
+  - [方程组](#%E6%96%B9%E7%A8%8B%E7%BB%84)
 - [颜色](#%E9%A2%9C%E8%89%B2)
 - [公式标记与引用](#%E5%85%AC%E5%BC%8F%E6%A0%87%E8%AE%B0%E4%B8%8E%E5%BC%95%E7%94%A8)
 
@@ -200,7 +200,7 @@ $$
 
 对于单字符，`\hat` :  $\hat x$ ;
 对于多字符，`\widehat` : $\widehat {xy}$
-类似的还有 `\overline` , `\vec` , `\overrightarrow` , `\dot` , `\ddot` : $\overline {xyz}$ $\vec a$ $\overrightarrow x$ $\dot x$ $\ddot x$
+类似的还有 `\overline` , `\vec` , `\overrightarrow` ,`widetilde`, `\dot` , `\ddot` : $\overline {xyz}$ $\vec a$ $\overrightarrow x$ $\widetilde a$ $\dot x$ $\ddot x$
 
 ### 转义
 
