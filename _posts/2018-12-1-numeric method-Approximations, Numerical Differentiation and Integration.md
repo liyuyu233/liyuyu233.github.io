@@ -1,5 +1,5 @@
 ---
-title: 近似法，数值微分与积分
+title: 【Numeric Method】近似法，数值微分与积分
 layout: post
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 中国A股beta值回归
+title: 【Investment】中国A股beta值回归
 layout: post
 ---
 

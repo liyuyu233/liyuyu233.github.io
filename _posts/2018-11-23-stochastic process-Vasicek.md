@@ -1,5 +1,5 @@
 ---
-title: Vasicek模型
+title: 【Stochastic Process】Vasicek模型
 layout: post
 ---
 # 特定模型

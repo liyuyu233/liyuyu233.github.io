@@ -1,5 +1,5 @@
 ---
-title: 中国A股市场年化收益率统计(Python)
+title: 【Python&Investment】中国A股市场年化收益率统计
 layout: post
 ---
 

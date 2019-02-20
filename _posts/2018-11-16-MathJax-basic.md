@@ -1,3 +1,7 @@
+---
+title: 【Mathjax】公式简介
+layout: post
+---
 Modified from [MathJax与LaTex公式简介 (转载)](http://www.cnblogs.com/linxd/p/4955530.html)
 
 ## Content

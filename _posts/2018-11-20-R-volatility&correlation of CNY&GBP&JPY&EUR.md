@@ -1,5 +1,5 @@
 ﻿---
-title: 人民币、英镑、日元、欧元汇率波动性与关联性（基于R语言）
+title: 【R】人民币、英镑、日元、欧元汇率波动性与关联性
 layout: post
 ---
 数据来源：[BIS](https://stats.bis.org/#)  

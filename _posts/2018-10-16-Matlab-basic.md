@@ -1,4 +1,7 @@
-
+---
+title: 【Matlab】基础及奇妙的例子
+layout: post
+---
 - [Matlab语法](#matlab语法)
     - [变量和赋值语句](#变量和赋值语句)
         - [变量](#变量)

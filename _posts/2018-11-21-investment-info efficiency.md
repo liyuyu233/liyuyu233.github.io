@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 信息效率
+title: 【Investment】信息效率
 ---
 
 - [市场异常现象(Anomalies)](#%E5%B8%82%E5%9C%BA%E5%BC%82%E5%B8%B8%E7%8E%B0%E8%B1%A1anomalies)
-    - [股票溢价之谜](#%E8%82%A1%E7%A5%A8%E6%BA%A2%E4%BB%B7%E4%B9%8B%E8%B0%9C)
-    - [波动率之谜 volatility puzzle](#%E6%B3%A2%E5%8A%A8%E7%8E%87%E4%B9%8B%E8%B0%9C-volatility-puzzle)
-    - [长期价格反转 long-term price reversals](#%E9%95%BF%E6%9C%9F%E4%BB%B7%E6%A0%BC%E5%8F%8D%E8%BD%AC-long-term-price-reversals)
-    - [规模溢价之迷](#%E8%A7%84%E6%A8%A1%E6%BA%A2%E4%BB%B7%E4%B9%8B%E8%BF%B7)
+  - [股票溢价之谜](#%E8%82%A1%E7%A5%A8%E6%BA%A2%E4%BB%B7%E4%B9%8B%E8%B0%9C)
+  - [波动率之谜 volatility puzzle](#%E6%B3%A2%E5%8A%A8%E7%8E%87%E4%B9%8B%E8%B0%9C-volatility-puzzle)
+  - [长期价格反转 long-term price reversals](#%E9%95%BF%E6%9C%9F%E4%BB%B7%E6%A0%BC%E5%8F%8D%E8%BD%AC-long-term-price-reversals)
+  - [规模溢价之迷](#%E8%A7%84%E6%A8%A1%E6%BA%A2%E4%BB%B7%E4%B9%8B%E8%BF%B7)
 - [市场什么时候非有效](#%E5%B8%82%E5%9C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9D%9E%E6%9C%89%E6%95%88)
-    - [市场什么时候有效](#%E5%B8%82%E5%9C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%9C%89%E6%95%88)
-    - [认知偏差](#%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE)
+  - [市场什么时候有效](#%E5%B8%82%E5%9C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%9C%89%E6%95%88)
+  - [认知偏差](#%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE)
   
 ## 信息产生
 1. 上市公司披露

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 欢迎来看我鹅子
+title: 【图】一只企鹅
 tags: 图
 ---
 这是我鹅子

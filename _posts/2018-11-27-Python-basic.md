@@ -1,5 +1,5 @@
 ﻿---
-title: 实用Python编程
+title: 【Python】基础
 layout: post
 ---
 - [lecture 3 list, dict, tuple](#lecture-3-list-dict-tuple)
