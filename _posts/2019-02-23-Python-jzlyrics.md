@@ -4,8 +4,7 @@ layout: post
 ---
 
 
-爬虫，代码与结果，爬的是周杰伦在QQ音乐上所有歌曲的歌词。
-
+爬虫，代码与结果，爬的是周杰伦在QQ音乐上所有歌曲的歌词。（非常费劲地用word清理了格式，不会正则表达式真悲哀
 - [代码](#%E4%BB%A3%E7%A0%81)
 - [结果](#%E7%BB%93%E6%9E%9C)
   - [告白气球](#%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83)
@@ -367,7 +366,10 @@ layout: post
   - [阳光宅男](#%E9%98%B3%E5%85%89%E5%AE%85%E7%94%B7-1)
   - [等你下课](#%E7%AD%89%E4%BD%A0%E4%B8%8B%E8%AF%BE-1)
   - [发如雪](#%E5%8F%91%E5%A6%82%E9%9B%AA-1)
+
+
 ## 代码
+
 ```Python
 # 引用requests模块
 import requests
@@ -382,9 +384,6 @@ URLs=[]
 for i in range(1,20):
     #装作浏览器的请求头，直接从request headers复制过来的
     headers = {
-        'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'DNT': '1',
-        'Origin': 'https://y.qq.com',
         'Referer': 'https://y.qq.com/portal/search.html',
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36',
     }
@@ -466,6 +465,7 @@ for URL in URLs:
 with open('C:/Users/Administrator/Desktop/lyrics.txt','w',encoding='utf-8') as file1:
     file1.writelines(lyrics)
 ```
+
 ## 结果
 ### 告白气球
 
