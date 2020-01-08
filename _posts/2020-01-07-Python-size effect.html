@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>PythonCode4_SizeEffect</title>
+<title>Python_SizeEffect</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13116,24 +13116,25 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#26816;&#39564;size-effect">&#26816;&#39564;size effect<a class="anchor-link" href="#&#26816;&#39564;size-effect">&#182;</a></h1><p>这里的size effect是指<a href="https://baike.baidu.com/item/Fama-French%E4%B8%89%E5%9B%A0%E5%AD%90%E6%A8%A1%E5%9E%8B/7262839?fr=aladdin">Fama-French三因子模型</a>当中的市值因子。（详情请见<a href="10.1111/j.1540-6261.1992.tb04398.x">Fama, E. F. , &amp; French, K. R. . (1992). The cross-section of expected stock returns. The Journal of Finance, 47(2), 427-465.</a>）</p>
-<p>这篇论文虽然是学习资产定价领域的经典必读作品，但是并不是本文的主题。这篇文章的主要目的是<em>从非常新手的角度</em>（包含了非常多的絮絮叨叨和各种文档链接）熟悉python的相关操作，<strong>不构成任何形式的投资建议</strong>（因为看起来显著可能实际上是哪里算错了）。</p>
+<h1 id="&#12304;Python&#12305;&#26816;&#39564;size-effect">&#12304;Python&#12305;&#26816;&#39564;size effect<a class="anchor-link" href="#&#12304;Python&#12305;&#26816;&#39564;size-effect">&#182;</a></h1><p>这里的size effect是指<a href="https://baike.baidu.com/item/Fama-French%E4%B8%89%E5%9B%A0%E5%AD%90%E6%A8%A1%E5%9E%8B/7262839?fr=aladdin">Fama-French三因子模型</a>当中的市值因子。市值就是股票价格乘以股票总量，有两种类型：总市值指股票价格乘以发行总股数，流通市值指股票价格乘以流通股数。本文检验的是总市值。关于size effect的一般结论是，公司市值越小，收益率越高。（详情请见<a href="10.1111/j.1540-6261.1992.tb04398.x">Fama, E. F. , &amp; French, K. R. . (1992). The cross-section of expected stock returns. The Journal of Finance, 47(2), 427-465.</a>）</p>
+<p>这篇论文虽然是学习资产定价领域的经典必读作品，但是并不是本文的主题（虽然本文为了解释清楚到底发生了什么包含了一些相关信息）。这篇文章的主要目的是<em>从非常新手的角度</em>（包含了非常多的絮絮叨叨和各种文档链接）熟悉python的相关操作，<strong>不构成任何形式的投资建议</strong><del>（因为看起来显著可能实际上是哪里算错了）</del>。</p>
 <p>主要步骤包括：</p>
 <ol>
-<li>处理数据<ol>
-<li>读取数据（这里使用的数据来自于国泰安数据库）</li>
-<li>筛选数据（只包括A股和创业板）（并不在意B股如何）</li>
-<li>转换数据类型（因为一开始每一列都有str所以读进来是object导致需要强行转换成能看的形式），顺带折腾一下datetime之类的玩意儿</li>
-<li>储存数据（备份以防万一吧可能）</li>
+<li><a href="#1.-%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE">处理数据</a><ol>
+<li><a href="#1.A.-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">读取数据</a>：本文使用的数据是1991年-2019年的个股月度交易数据。（来自于国泰安数据库）</li>
+<li><a href="#1.B.-%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE">筛选数据</a>：只包括A股和创业板<del>（并不在意B股如何）</del></li>
+<li><a href="#1.C.-%E8%BD%AC%E6%8D%A2%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">转换数据类型</a>（因为一开始每一列都有str所以读进来是object导致需要强行转换成能看的形式）<del>顺带折腾一下datetime之类的玩意儿</del></li>
+<li>储存数据<del>（备份以防万一吧可能）</del></li>
 </ol>
 </li>
-<li>计算<ol>
-<li>每年六月，按照市值从小到大划分为十组</li>
-<li>计算每年每一组的按市值加权的组合收益</li>
+<li><a href="#2.-%E8%AE%A1%E7%AE%97">计算</a><ol>
+<li><a href="#2.A.-%E5%88%86%E7%BB%84">分组</a>：每年六月，按照市值从小到大划分为十组</li>
+<li><a href="#2.B.-%E8%AE%A1%E7%AE%97%E7%BB%84%E5%90%88%E6%94%B6%E7%9B%8A">计算组合收益</a>：计算每一组的按市值加权的组合收益</li>
 </ol>
 </li>
-<li>分析结果（看组合收益是否显著不为0）</li>
+<li><a href="#3.-%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C">分析结果</a>（看组合收益是否显著不为0）</li>
 </ol>
+<p>【Ver2更新】并不熟悉组合收益之类概念的朋友请戳<a href="#Appendix1">Appendix1</a>，好奇如何作为策略操作的朋友请戳<a href="#Appendix2">Appendix2</a></p>
 
 </div>
 </div>
@@ -13400,10 +13401,6 @@ div#notebook {
 <tr>
 <td style="text-align:left">Trdmnt</td>
 <td style="text-align:left">交易月份</td>
-</tr>
-<tr>
-<td style="text-align:left">Msmvosd</td>
-<td style="text-align:left">月个股流通市值</td>
 </tr>
 <tr>
 <td style="text-align:left">Msmvttl</td>
@@ -13826,7 +13823,7 @@ div#notebook {
     <span class="n">x</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span> <span class="o">==</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
         <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
-        <span class="n">x</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span><span class="o">&gt;=</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span><span class="o">&lt;=</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="s1">&#39;rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span> <span class="o">&gt;=</span> <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">Msmvttl</span> <span class="o">&lt;=</span> <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="s1">&#39;rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
     <span class="k">return</span> <span class="n">x</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;tmidx&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">rank</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -14046,7 +14043,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>这里是要按上个月的总市值进行加权。以下是一个推导可以不用理它。</p>
+<p>这里是要按上个月的总市值进行加权来计算组合收益率。以下是一个推导可以不用理它。</p>
 <blockquote><p>假设$t-1$月末组合中资产i总价值为$A_{t-1,i}$，$t$月末资产i总价值为$A_{t,i}$，$t$月资产i收益率为$r_{t,i}$</p>
 <p>又假设$t-1$月末整个组合的资产总价值为$A_{t-1}$，$t$月末整个组合的资产为$A_t$，$t$月的组合收益率为$r_t$</p>
 <p>则</p>
@@ -14084,7 +14081,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>按照上面那个推导算每个组合的收益率</p>
+<p>按照上面那个推导算每个组合的收益率（retvwttl）</p>
 <p>apply表示对于groupby返回的所有组，都执行一个函数。详见<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html">pd.DataFrame.apply</a></p>
 
 </div>
@@ -14511,7 +14508,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>建立SMB组合（就是买入size最小的卖出size最大的）<del>（目前是不能卖空但是就是看看情况）</del></p>
+<p>计算SMB组合（就是买入size最小的卖出size最大的）收益率<del>（目前是不能卖空但是就是看看情况）</del></p>
 
 </div>
 </div>
@@ -14521,7 +14518,7 @@ $$
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="s1">&#39;1991-07&#39;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">&lt;=</span><span class="s1">&#39;2018-06&#39;</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="s1">&#39;1991-07&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;=</span> <span class="s1">&#39;2018-06&#39;</span><span class="p">)]</span>
 </pre></div>
 
     </div>
@@ -14547,15 +14544,13 @@ $$
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">Quantile = </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">t-statistic = </span><span class="si">{}</span><span class="s2"></span>
-<span class="s2">pvalue = </span><span class="si">{}</span><span class="s2"></span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="s2">pvalue = </span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
 
 <span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smb&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nan_policy</span> <span class="o">=</span> <span class="s1">&#39;omit&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SMB</span>
 <span class="s2">t-statistic = </span><span class="si">{}</span><span class="s2"></span>
-<span class="s2">pvalue = </span><span class="si">{}</span><span class="s2"></span>
-<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="s2">pvalue = </span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14639,6 +14634,120 @@ pvalue = 0.0005260472702248968
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>进行t检验（详见<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html">scipy.stats.ttest_1samp</a>）</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Appendix1">Appendix1<a class="anchor-link" href="#Appendix1">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#32452;&#21512;">&#32452;&#21512;<a class="anchor-link" href="#&#32452;&#21512;">&#182;</a></h3><p><em>组合</em>（portfolio），或者说<em>股票组合</em>，指投资者持有的证券。可以简单地理解成很多不同公司的股票。</p>
+<h3 id="&#25910;&#30410;&#29575;">&#25910;&#30410;&#29575;<a class="anchor-link" href="#&#25910;&#30410;&#29575;">&#182;</a></h3><p><em>收益率</em>（return），或者说<em>收益</em>、<em>回报率</em>，分为考虑现金红利再投资的个股回报率和不考虑现金红利再投资的个股回报率。本文中个股收益指考虑现金红利再投资的月个股回报率（Mretwd），计算方法为：</p>
+$$
+r_{i,t} = \frac{P_{i,t}}{P_{i,t-1}}-1
+$$<p>其中$r_{i,t}$为股票i在t月的考虑现金红利再投资的月个股回报率，$P_{i,t}$为股票i在t月的最后一个交易日的日收盘价。</p>
+<h3 id="t&#26816;&#39564;">t&#26816;&#39564;<a class="anchor-link" href="#t&#26816;&#39564;">&#182;</a></h3><p>本文中的t检验是为了验证这些组合的平均收益率是否显著不等于0。t值越大p值越小，当$p&lt;=a\%$的时候，就可以说在$(1-a)\%$的置信区间上，平均收益率显著不等于0（但是这里并没有用超额收益率所以并不一定能跑赢无风险收益率）。<del>超额收益率、无风险收益率就自行搜索引擎吧跟这里关系不大</del></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Appendix2">Appendix2<a class="anchor-link" href="#Appendix2">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>再次声明，本文<strong>不构成任何形式的投资建议</strong>，只是为了增加一下对概念的理解进行一个模拟操作的讨论。</p>
+<blockquote><p>每年六月，按照市值大小划分为十组股票组合（市值从小到大排序，前百分之十为第一组，百分之十到百分之二十为第二组，以此类推）</p>
+<p>然后这一年七月到下一年六月这一段时间里，就按照这个分组，计算每一个股票组合的收益率（按市值加权）</p>
+</blockquote>
+<p>例如投资市值最小的第一组股票组合，就需要每年六月给所有股票的市值由小到大进行排序，买前百分之十的股票。由于这里是市值加权，所以买入的股票数量正比于该股票的市值权重。注意这里只需要每年调整一次就好了，不需要为了保持市值权重每月调仓，简单地理解就是市值加权随着市场价格浮动，同时持有的股票组合中的权重也是随市场价格浮动的。<del>不需要证明的话可以跳过证明部分</del>如果需要证明的话$\Rightarrow$</p>
+<h3 id="&#35777;&#26126;">&#35777;&#26126;<a class="anchor-link" href="#&#35777;&#26126;">&#182;</a></h3><p>假设目标组合中只有A、B两支股票。</p>
+<h4 id="&#22312;t&#26376;">&#22312;t&#26376;<a class="anchor-link" href="#&#22312;t&#26376;">&#182;</a></h4><p>在t月最后一个交易日，相关信息如下：</p>
+<table>
+<thead><tr>
+<th>公司</th>
+<th>A</th>
+<th>B </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股票发行总数</td>
+<td>$$N_A$$</td>
+<td>$$N_B$$</td>
+</tr>
+<tr>
+<td>股价</td>
+<td>$$P_{A,t}$$</td>
+<td>$$P_{B,t}$$</td>
+</tr>
+<tr>
+<td>市值权重</td>
+<td>$$\frac{N_A \times P_{A, t}}{M_t}$$</td>
+<td>$$\frac{N_B \times P_{B, t}}{M_t}$$</td>
+</tr>
+</tbody>
+</table>
+<p>其中$$M_t = N_A \times P_{A,t} + N_B \times P_{B,t}$$</p>
+<p>投资者按市值权重买入A、B，假设总资产为$I_t$,则持有A股票数量$$n_A = \frac{N_A \times I_t}{M_t}$$，持有B股票数量$$n_B = \frac{N_B \times I_t}{M_t}$$</p>
+<h4 id="&#22312;t+1&#26376;">&#22312;t+1&#26376;<a class="anchor-link" href="#&#22312;t+1&#26376;">&#182;</a></h4><p>在t+1月的最后一个交易日，相关信息变为：</p>
+<table>
+<thead><tr>
+<th>公司</th>
+<th>A</th>
+<th>B </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股票发行总数</td>
+<td>$$N_A$$</td>
+<td>$$N_B$$</td>
+</tr>
+<tr>
+<td>股价</td>
+<td>$$P_{A,t+1}$$</td>
+<td>$$P_{B,t+1}$$</td>
+</tr>
+<tr>
+<td>市值权重</td>
+<td>$$\frac{N_A \times P_{A,t+1}}{M_{t+1}}$$</td>
+<td>$$\frac{N_B \times P_{B,t+1}}{M_{t+1}}$$</td>
+</tr>
+</tbody>
+</table>
+<p>其中$$M_{t+1} = N_A \times P_{A,{t+1}} + N_B \times P_{B,{t+1}}$$</p>
+<p>此时投资者总资产为$$I_{t+1} = n_A \times P_{A,t+1} + n_B \times P_{B,t+1}$$，其中A股票权重
+$$w_A = \frac{n_A \times P_{A,t+1}}{n_A \times P_{A,t+1} + n_B \times P_{B,t+1}}$$</p>
+$$w_A = \frac{\frac{N_A \times I_t}{M_t} \times P_{A,t+1}}{\frac{N_A \times I_t}{M_t} \times P_{A,t+1} + \frac{N_B \times I_t}{M_t} \times P_{B,t+1}} $$$$w_A = \frac{N_A \times P_{A,t+1}}{N_A \times P_{A,{t+1}} + N_B \times P_{B,{t+1}}} $$<p>所以一直是跟市场的市值权重保持一致的！</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33268;&#35874;">&#33268;&#35874;<a class="anchor-link" href="#&#33268;&#35874;">&#182;</a></h2><p>最后感谢不愿透露姓名的<a href="https://github.com/liqinyuan1211">中国某高校学生.jpg</a>对本文的proofreading?以及【提出了各种作为可爱萌新的疑惑】帮助本文成为一个新手向应该有的样子。</p>
 
 </div>
 </div>
