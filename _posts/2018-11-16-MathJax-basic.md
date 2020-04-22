@@ -6,30 +6,30 @@ Modified from [MathJax与LaTex公式简介 (转载)](http://www.cnblogs.com/linx
 
 ## Content
 - [Content](#content)
-- [括号](#%E6%8B%AC%E5%8F%B7)
-- [求和与积分](#%E6%B1%82%E5%92%8C%E4%B8%8E%E7%A7%AF%E5%88%86)
-- [分式和根式](#%E5%88%86%E5%BC%8F%E5%92%8C%E6%A0%B9%E5%BC%8F)
-- [字体](#%E5%AD%97%E4%BD%93)
-- [特殊函数和符号](#%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0%E5%92%8C%E7%AC%A6%E5%8F%B7)
-  - [希腊字母](#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D)
-  - [空间](#%E7%A9%BA%E9%97%B4)
-  - [顶部符号](#%E9%A1%B6%E9%83%A8%E7%AC%A6%E5%8F%B7)
-  - [转义](#%E8%BD%AC%E4%B9%89)
-- [表格](#%E8%A1%A8%E6%A0%BC)
-- [矩阵](#%E7%9F%A9%E9%98%B5)
-  - [加括号](#%E5%8A%A0%E6%8B%AC%E5%8F%B7)
-  - [省略元素](#%E7%9C%81%E7%95%A5%E5%85%83%E7%B4%A0)
-  - [增广矩阵](#%E5%A2%9E%E5%B9%BF%E7%9F%A9%E9%98%B5)
-  - [对齐的公式](#%E5%AF%B9%E9%BD%90%E7%9A%84%E5%85%AC%E5%BC%8F)
-  - [分类表达式](#%E5%88%86%E7%B1%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-- [空间问题](#%E7%A9%BA%E9%97%B4%E9%97%AE%E9%A2%98)
-  - [不要在指数或者积分中使用`\frac`](#%E4%B8%8D%E8%A6%81%E5%9C%A8%E6%8C%87%E6%95%B0%E6%88%96%E8%80%85%E7%A7%AF%E5%88%86%E4%B8%AD%E4%BD%BF%E7%94%A8frac)
-  - [使用`\mid`代替`|`作为分隔符](#%E4%BD%BF%E7%94%A8mid%E4%BB%A3%E6%9B%BF%E4%BD%9C%E4%B8%BA%E5%88%86%E9%9A%94%E7%AC%A6)
-  - [多重积分](#%E5%A4%9A%E9%87%8D%E7%A7%AF%E5%88%86)
-  - [连分数](#%E8%BF%9E%E5%88%86%E6%95%B0)
-  - [方程组](#%E6%96%B9%E7%A8%8B%E7%BB%84)
-- [颜色](#%E9%A2%9C%E8%89%B2)
-- [公式标记与引用](#%E5%85%AC%E5%BC%8F%E6%A0%87%E8%AE%B0%E4%B8%8E%E5%BC%95%E7%94%A8)
+- [括号](#%e6%8b%ac%e5%8f%b7)
+- [求和与积分](#%e6%b1%82%e5%92%8c%e4%b8%8e%e7%a7%af%e5%88%86)
+- [分式和根式](#%e5%88%86%e5%bc%8f%e5%92%8c%e6%a0%b9%e5%bc%8f)
+- [字体](#%e5%ad%97%e4%bd%93)
+- [特殊函数和符号](#%e7%89%b9%e6%ae%8a%e5%87%bd%e6%95%b0%e5%92%8c%e7%ac%a6%e5%8f%b7)
+  - [希腊字母](#%e5%b8%8c%e8%85%8a%e5%ad%97%e6%af%8d)
+  - [空间](#%e7%a9%ba%e9%97%b4)
+  - [顶部符号](#%e9%a1%b6%e9%83%a8%e7%ac%a6%e5%8f%b7)
+  - [转义](#%e8%bd%ac%e4%b9%89)
+- [表格](#%e8%a1%a8%e6%a0%bc)
+- [矩阵](#%e7%9f%a9%e9%98%b5)
+  - [加括号](#%e5%8a%a0%e6%8b%ac%e5%8f%b7)
+  - [省略元素](#%e7%9c%81%e7%95%a5%e5%85%83%e7%b4%a0)
+  - [增广矩阵](#%e5%a2%9e%e5%b9%bf%e7%9f%a9%e9%98%b5)
+  - [对齐的公式](#%e5%af%b9%e9%bd%90%e7%9a%84%e5%85%ac%e5%bc%8f)
+  - [分类表达式](#%e5%88%86%e7%b1%bb%e8%a1%a8%e8%be%be%e5%bc%8f)
+- [空间问题](#%e7%a9%ba%e9%97%b4%e9%97%ae%e9%a2%98)
+  - [不要在指数或者积分中使用`\frac`](#%e4%b8%8d%e8%a6%81%e5%9c%a8%e6%8c%87%e6%95%b0%e6%88%96%e8%80%85%e7%a7%af%e5%88%86%e4%b8%ad%e4%bd%bf%e7%94%a8frac)
+  - [使用`\mid`代替`|`作为分隔符](#%e4%bd%bf%e7%94%a8mid%e4%bb%a3%e6%9b%bf%e4%bd%9c%e4%b8%ba%e5%88%86%e9%9a%94%e7%ac%a6)
+  - [多重积分](#%e5%a4%9a%e9%87%8d%e7%a7%af%e5%88%86)
+  - [连分数](#%e8%bf%9e%e5%88%86%e6%95%b0)
+  - [方程组](#%e6%96%b9%e7%a8%8b%e7%bb%84)
+- [颜色](#%e9%a2%9c%e8%89%b2)
+- [公式标记与引用](#%e5%85%ac%e5%bc%8f%e6%a0%87%e8%ae%b0%e4%b8%8e%e5%bc%95%e7%94%a8)
 
 ## 括号
 
@@ -149,7 +149,9 @@ $$
 * `\times \div \pm \mp` 表示：$\times$ $\div$ $\pm$ $\mp$，`\cdot`表示居中的点，`x \cdot y` ：$x \cdot y$
 * 集合关系与运算：`\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing` : $\cup$ $\cap$ $\setminus$ $\subset$ $\subseteq$ $\subsetneq$ $\supset$ $\in$ $\notin$ $\emptyset$ $\varnothing$
 * 表示排列使用`\binom{n+1}{2k}`或`{n+1 \choose 2k}`：$\binom{n+1}{2k}$ ${n+1 \choose 2k}$
-* 箭头：`\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto`: $\to$ $\rightarrow$ $\leftarrow$ $\Rightarrow$ $\Leftarrow$ $\mapsto$
+* 箭头：`\uparrow \downarrow \Uparrow \Downarrow \updownarrow \Updownarrow \to \rightarrow \leftarrow \Rightarrow \Leftarrow \leftrightarrow
+\Leftrightarrow \longrightarrow \longleftarrow \Longrightarrow \Longleftarrow \longleftrightarrow \Longleftrightarrow \mapsto \longmapsto \hookleftarrow \hookrightarrow \leftharpoonup \rightharpoonup \leftharpoondown \rightharpoondown \rightleftharpoons \leadsto \nearrow \searrow \swarrow \nwarrow \nleftarrow \nrightarrow \nLeftarrow \nRightarrow \nleftrightarrow \nLeftrightarrow \dashrightarrow \dashleftarrow \leftleftarrows \leftrightarrows \Lleftarrow \twoheadleftarrow \leftarrowtail \looparrowleft \leftrightharpoons \curvearrowleft \circlearrowleft \Lsh \upuparrows \upharpoonleft \downharpoonleft \multimap \leftrightsquigarrow \rightrightarrows \rightleftarrows \rightrightarrows \rightleftarrows \twoheadrightarrow \rightarrowtail \looparrowright \rightleftharpoons \curvearrowright \circlearrowright \Rsh \downdownarrows \upharpoonright \downharpoonright \rightsquigarrow`: $\uparrow$ $\downarrow$ $\Uparrow$ $\Downarrow$ $\updownarrow$ $\Updownarrow$ $\to$ $\rightarrow$ $\leftarrow$ $\Rightarrow$ $\Leftarrow$ $\leftrightarrow$
+$\Leftrightarrow$ $\longrightarrow$ $\longleftarrow$ $\Longrightarrow$ $\Longleftarrow$ $\longleftrightarrow$ $\Longleftrightarrow$ $\mapsto$ $\longmapsto$ $\hookleftarrow$ $\hookrightarrow$ $\leftharpoonup$ $\rightharpoonup$ $\leftharpoondown$ $\rightharpoondown$ $\rightleftharpoons$ $\leadsto$ $\nearrow$ $\searrow$ $\swarrow$ $\nwarrow$ $\nleftarrow$ $\nrightarrow$ $\nLeftarrow$ $\nRightarrow$ $\nleftrightarrow$ $\nLeftrightarrow$ $\dashrightarrow$ $\dashleftarrow$ $\leftleftarrows$ $\leftrightarrows$ $\Lleftarrow$ $\twoheadleftarrow$ $\leftarrowtail$ $\looparrowleft$ $\leftrightharpoons$ $\curvearrowleft$ $\circlearrowleft$ $\Lsh$ $\upuparrows$ $\upharpoonleft$ $\downharpoonleft$ $\multimap$ $\leftrightsquigarrow$ $\rightrightarrows$ $\rightleftarrows$ $\rightrightarrows$ $\rightleftarrows$ $\twoheadrightarrow$ $\rightarrowtail$ $\looparrowright$ $\rightleftharpoons$ $\curvearrowright$ $\circlearrowright$ $\Rsh$ $\downdownarrows$ $\upharpoonright$ $\downharpoonright$ $\rightsquigarrow$
 * 逻辑运算符：`\land \lor \lnot \forall \exists \top \bot \vdash \vDash`：$\land$ $\lor$ $\lnot$ $\forall$ $\exists$ $\top$ $\bot$ $\vdash$ $\vDash$
 * `\star \ast \oplus \circ \bullet` : $\star$ $\ast$ $\oplus$ $\circ$ $\bullet$
 * `\approx \sim \cong \equiv \prec` : $\approx$ $\sim$ $\cong$ $\equiv$ $\prec$
