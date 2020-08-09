@@ -65,7 +65,7 @@ data.head(4)# 显示前4行
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -230,7 +230,7 @@ print('处理后数据量：',len(data))
 
     处理前数据量： 514915
     处理后数据量： 511112
-    
+
 
 `data[['Stkcd', 'tmidx', 'Mopnprc', 'Mclsprc', 'Msmvosd', 'Mretwd']]`：选取data的Stkcd, tmidx, Mopnprc, Mclsprc, Msmvosd, Mretwd列（详见[indexing#basics](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#basics)）
 
@@ -278,7 +278,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -404,7 +404,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -513,7 +513,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
